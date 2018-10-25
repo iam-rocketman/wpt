@@ -119,14 +119,6 @@ var formElements = {
   progress: {
     max: {type: "limited double", defaultVal: 1.0},
   },
-  meter: {
-    value: {type: "double", customGetter: true},
-    min: {type: "double", customGetter: true},
-    max: {type: "double", customGetter: true},
-    low: {type: "double", customGetter: true},
-    high: {type: "double", customGetter: true},
-    optimum: {type: "double", customGetter: true},
-  },
 };
 
 mergeElements(formElements);

@@ -68,6 +68,16 @@
           assert_equals(meter.low, m.expectedLow, "low value");
           assert_equals(meter.high, m.expectedHigh, "high value");
           assert_equals(meter.optimum, m.expectedOptimum, "optimum value");
+          meter.removeAttribute("min");
+          assert_equals(meter.min, 0.0, "unset min attribute");
+          meter.removeAttribute("max");
+          assert_equals(meter.max, 1.0, "unset max attribute");
+          meter.removeAttribute("low");
+          assert_equals(meter.low, 0.0, "unset low attribute");
+          meter.removeAttribute("high");
+          assert_equals(meter.high, 1.0, "unset high attribute");
+          meter.removeAttribute("optimum");
+          assert_equals(meter.optimum, 0.5, "unset optimum attibute");
         }, m.testname);
       }
       test(function() {
